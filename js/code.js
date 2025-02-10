@@ -201,3 +201,15 @@ My Script
   //Initializing Pure Counter 
   new PureCounter();
 })()
+const previewTrigger = document.getElementById("preview-trigger");
+const previewBox = document.getElementById("preview-box");
+
+previewTrigger.addEventListener("mouseenter", function (event) {
+    previewBox.style.display = "block";
+    previewBox.style.top = event.clientY + 10 + "px";
+    previewBox.style.left = event.clientX + 10 + "px";
+});
+
+previewTrigger.addEventListener("mouseleave", function () {
+    previewBox.style.display = "none";
+});
